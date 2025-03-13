@@ -61,11 +61,11 @@ with torch.no_grad():
     print(f"ENCUT: {reg_pred[0]}, ISMEAR: {torch.argmax(ismear_pred).item()}")
 Note: You’ll need to define extract_features and the MultiSeqVASPTransformer class based on your original code.
 
-### 📁 Files
+## 📁 Files
 vasp_model.pth: Pre-trained model with scalers
 example/POSCAR_example: Sample input (optional)
 
-### 👤 Author
+## 👤 Author
 Junxin Huang
 Chengdu University of Technology, Research Center for Planetary Science
 Email: huangjunxin167@gmail.com
