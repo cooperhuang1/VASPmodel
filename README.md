@@ -14,7 +14,7 @@ This is a pre-trained model designed to predict VASP parameters (e.g., ENCUT, IS
 
 ## 🚀 How to Use
 
-### Prerequisites
+## Prerequisites
 - Python 3.8+
 - PyTorch (`pip install torch`)
 - pymatgen (`pip install pymatgen`)
@@ -22,12 +22,11 @@ This is a pre-trained model designed to predict VASP parameters (e.g., ENCUT, IS
 
 ### Download
 Clone or download this repository:
-```bash
+bash
 git clone https://github.com/cooperhuang1/VASPModel.git
 cd VASPModel
 
-
-# Example Code
+### Example Code
 Load and use the model with a POSCAR file:
 import torch
 from pymatgen.core import Structure
@@ -45,14 +44,14 @@ scaler_y_reg = checkpoint['scaler_y_reg']
 poscar = Poscar.from_file("example/POSCAR_example")
 structure = poscar.structure
 
-# Extract features (you’ll need to define this function)
+#### Extract features (you’ll need to define this function)
 struct_features, elec_features = extract_features(structure)  # Placeholder
 
-# Scale features
+### Scale features
 struct_scaled = scaler_X_struct.transform([struct_features])
 elec_scaled = scaler_X_elec.transform([elec_features])
 
-# Predict
+### Predict
 struct_tensor = torch.tensor(struct_scaled, dtype=torch.float32)
 elec_tensor = torch.tensor(elec_scaled, dtype=torch.float32)
 with torch.no_grad():
@@ -61,15 +60,16 @@ with torch.no_grad():
     print(f"ENCUT: {reg_pred[0]}, ISMEAR: {torch.argmax(ismear_pred).item()}")
 Note: You’ll need to define extract_features and the MultiSeqVASPTransformer class based on your original code.
 
-## 📁 Files
+### 📁 Files
 vasp_model.pth: Pre-trained model with scalers
 example/POSCAR_example: Sample input (optional)
 
-## 👤 Author
+### 👤 Author
 Junxin Huang
 Chengdu University of Technology, Research Center for Planetary Science
 Email: huangjunxin167@gmail.com
 WeChat: h2005827723
-📜 License
-MIT License (free to use and modify!)
 
+### 📜 License
+MIT License (free to use and modify!)
+<img align="right" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="200"/> *Happy simulating! Let’s dive into quantum mechanics! 🐾* ```
