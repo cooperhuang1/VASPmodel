@@ -73,4 +73,3 @@ WeChat: h2005827723
 📜 License
 MIT License (free to use and modify!)
 
-<img align="right" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="200"/> *Happy simulating! Let’s dive into quantum mechanics! 🐾* ```
