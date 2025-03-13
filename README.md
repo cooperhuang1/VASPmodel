@@ -23,8 +23,8 @@ This is a pre-trained model designed to predict VASP parameters (e.g., ENCUT, IS
 ### Download
 Clone or download this repository: 
 bash 
-git clone https://github.com/cooperhuang1/VASPModel.git 
-cd VASPModel 
+git clone https://github.com/cooperhuang1/VASPmodel.git 
+cd VASPmodel 
 
 ### Example Code
 Load and use the model with a POSCAR file:   
